@@ -24,14 +24,29 @@ function Services() {
   //   }
   return (
     <div>
-      <h2>Our Services</h2>
-      {services.map((service) => (
-        <ServiceCard
-          key={service.id}
-          title={service.name}
-          description={service.description}
-        />
-      ))}
+      <h2 className="text-center text-3xl py-4 font-bold">Our Services</h2>
+      <div className="flex gap-x-4 justify-center items-center">
+        {services.map((service) => (
+          <ServiceCard
+            key={service.id}
+            title={service.name}
+            description={service.description}
+          />
+        ))}
+      </div>
+
+      {/* <ServiceCard
+        title="Service One"
+        description="Description for Service One"
+      />
+      <ServiceCard
+        title="Service Two"
+        description="Description for Service Two"
+      />
+      <ServiceCard
+        title="Service Three"
+        description="Description for Service Three"
+      /> */}
     </div>
   );
 }
