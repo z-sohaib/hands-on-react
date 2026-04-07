@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Services from "./components/Services";
 import TextCounter from "./components/TextCounter";
+import Counter from "./components/Counter";
 
 function App() {
   const Title = styled.h1`
@@ -23,7 +24,8 @@ function App() {
       {/* <Wrapper>
         <Title>Hello World!</Title>
       </Wrapper> */}
-      <TextCounter text="Random Text" />
+      {/* <TextCounter text="Random Text" /> */}
+      <Counter />
       <Services />
       <Footer />
     </div>
