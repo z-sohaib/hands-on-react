@@ -18,7 +18,7 @@ const services = [
   },
 ];
 
-function Services() {
+function OurServices() {
   //   function addArray(arr) {
   //     arr.map((element) => element + 1); // [1, 2, 3, 4] ====> [2, 3, 4, 5]
   //   }
@@ -29,6 +29,7 @@ function Services() {
         {services.map((service) => (
           <ServiceCard
             key={service.id}
+            id={service.id}
             title={service.name}
             description={service.description}
           />
@@ -51,4 +52,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default OurServices;

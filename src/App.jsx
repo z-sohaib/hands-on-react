@@ -1,34 +1,24 @@
-import styled from "styled-components";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Services from "./components/Services";
-import TextCounter from "./components/TextCounter";
-import Counter from "./components/Counter";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import MainLayout from "./layout/MainLayout";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ServiceDetails from "./pages/ServiceDetails";
 
 function App() {
-  const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #bf4f74;
-  `;
-
-  const Wrapper = styled.section`
-    padding: 4em;
-    background: papayawhip;
-  `;
-
   return (
-    <div className="flex flex-col items-center">
-      <Header user="John" />
-      <p>Hello World</p>
-      {/* <Wrapper>
-        <Title>Hello World!</Title>
-      </Wrapper> */}
-      {/* <TextCounter text="Random Text" /> */}
-      <Counter />
-      <Services />
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:id" element={<ServiceDetails />} />
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
 }
 
