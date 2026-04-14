@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import RefCounter from "../components/RefCounter";
 
 function About() {
   const location = useLocation();
@@ -13,6 +14,7 @@ function About() {
         dolores! Quos, fugiat. Optio odit in porro ratione autem!
       </p>
       <p>Current path: {location.pathname}</p>
+      <RefCounter />
     </div>
   );
 }

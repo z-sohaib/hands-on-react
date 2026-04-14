@@ -6,6 +6,10 @@ import MainLayout from "./layout/MainLayout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ServiceDetails from "./pages/ServiceDetails";
+import Stopwatch from "./pages/Stopwatch";
+import Context from "./pages/Context";
+import Quote from "./pages/Quote";
+import Form from "./pages/Form";
 
 function App() {
   return (
@@ -13,6 +17,10 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/stopwatch" element={<Stopwatch />} />
+        <Route path="/context" element={<Context />} />
+        <Route path="/quote" element={<Quote />} />
+        <Route path="/form" element={<Form />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetails />} />
       </Route>
