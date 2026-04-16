@@ -10,6 +10,9 @@ import Stopwatch from "./pages/Stopwatch";
 import Context from "./pages/Context";
 import Quote from "./pages/Quote";
 import Form from "./pages/Form";
+import Redux from "./pages/Redux";
+import ReduxMultiple from "./pages/ReduxMultiple";
+import Zustand from "./pages/Zustand";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/context" element={<Context />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/redux" element={<Redux />} />
+        <Route path="/zustand" element={<Zustand />} />
+        <Route path="/redux-multiple" element={<ReduxMultiple />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetails />} />
       </Route>
